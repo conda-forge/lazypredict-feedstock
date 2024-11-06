@@ -1,5 +1,5 @@
 {% set name = "lazypredict" %}
-{% set version = "0.2.12" %}
+{% set version = "0.2.13" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lazypredict-{{ version }}.tar.gz
-  sha256: f97797c3afe9ef5bebda3677eeb46e84c4291f0dac9f824105f509e4e8d234f5
+  sha256: a3a557365a83cb4d2fefc47adcb73fb0709888fb3708756f8e5c22e39ad443f0
 
 build:
   number: 0
