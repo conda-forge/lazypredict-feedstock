@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lazypredict-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/lazypredict-{{ version }}.tar.gz
   sha256: f97797c3afe9ef5bebda3677eeb46e84c4291f0dac9f824105f509e4e8d234f5
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - lazypredict=lazypredict.cli:main
@@ -21,22 +21,18 @@ requirements:
   host:
     - pip
     - pytest-runner
-    - python >=3.6
+    - python {{ python_min }}
+    - setuptools
   run:
-    - click ==7.1.2
-    - joblib ==1.0.0
-    - lightgbm ==2.3.1
-    - numpy ==1.19.1
-    - pandas ==1.0.5
-    - pytest ==5.4.3
-    - python >=3.6
-    - pyyaml ==5.3.1
-    - scikit-learn ==0.23.1
-    - scipy >=1.5.3
-    - six ==1.15.0
-    - tqdm ==4.56.0
-    - xgboost >=1.1.1
-
+    - python >={{ python_min }}
+    - click
+    - pandas
+    - scikit-learn
+    - tqdm
+    - joblib
+    - lightgbm
+    - xgboost
+    
 test:
   imports:
     - lazypredict
@@ -44,6 +40,7 @@ test:
     - lazypredict --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/shankarpandala/lazypredict
