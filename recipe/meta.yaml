@@ -32,6 +32,8 @@ requirements:
     - joblib
     - lightgbm
     - xgboost
+    - pytest-runner
+    - mlflow >=2.0.0
 
 test:
   imports:
