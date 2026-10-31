@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: lazypredict
-  version: "0.3.0"
+  version: "0.4.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/lazypredict-${{ version }}.tar.gz
-  sha256: 41466cb337d59563296ca56b262c8037add022283c79c4ebb6ce7a449b979880
+  sha256: b64ac2bffd027f5bb80b0fc57924a8c9ac1c8f5ae6970d534a016852bc46e024
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
   python:
